@@ -54,12 +54,16 @@ exports.decorateConfig = config => Object.assign({}, config, {
 			will-change: opacity;
 		}
 
-		.header_header {
+		.tab_tab {
 			background-color: ${backgroundContrastColor};
 		}
 
-		.tab_active {
+		.tab_tab.tab_active {
 			background-color: ${backgroundColor};
+		}
+
+		.tab_first {
+			border-left-width: 1px;
 		}
 	`
 });
