@@ -1,6 +1,7 @@
 'use strict';
 const foregroundColor = '#eff0eb';
 const backgroundColor = '#282a36';
+const backgroundContrastColor = '#3b3d48';
 const red = '#ff5c57';
 const green = '#5af78e';
 const yellow = '#f3f99d';
@@ -53,20 +54,12 @@ exports.decorateConfig = config => Object.assign({}, config, {
 			will-change: opacity;
 		}
 
-		.tab_tab::before {
-			content: '';
-			position: absolute;
-			bottom: 0;
-			left: 0;
-			right: 0;
-			height: 1px;
-			background-color: rgba(255, 106, 193, 0.4);
-			transform: scaleX(0);
+		.header_header {
+			background-color: ${backgroundContrastColor};
 		}
 
-		.tab_tab.tab_active::before {
-			transform: scaleX(1);
-			transition: all 200ms cubic-bezier(0.0, 0.0, 0.2, 1);
+		.tab_active {
+			background-color: ${backgroundColor};
 		}
 	`
 });
